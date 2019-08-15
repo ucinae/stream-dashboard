@@ -1,25 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { Layout } from 'antd'
+
+import Home from './routes/Home'
+import Dashboard from './routes/Dashboard'
+import Statistic from './routes/Statistic'
+import Navbar from './components/Navbar'
+
+const { Content, Footer } = Layout
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Layout>
+      <Router>
+        <Navbar />
+
+        <Content style={{ padding: '0 50px', marginTop: 64, minHeight: '90vh' }}>
+          <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/dashboard" component={Dashboard} />
+            <Route path="/statistic" component={Statistic} />
+          </Switch>
+        </Content>
+
+        <Footer style={{ textAlign: 'center' }}>Ant Design ©2019 Created by hansol</Footer>
+      </Router>
+    </Layout>
   );
 }
 
