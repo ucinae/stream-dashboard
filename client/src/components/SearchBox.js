@@ -5,7 +5,7 @@ const { Search } = Input
 
 const SearchBox = ({ logo, color }) => {
   return (
-    <div style={{ width: "350px", background: "#fff" }}>
+    <div style={{ width: "350px", background: "#fff", margin: "1rem" }}>
       <Search 
         addonBefore={<Avatar src={logo} />} 
         placeholder="검색어 입력" 
