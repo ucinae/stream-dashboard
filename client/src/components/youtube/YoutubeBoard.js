@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import uuid from 'uuid/v4'
 
 import SearchBox from '../SearchBox'
 import KeyBox from '../KeyBox'
@@ -10,14 +11,15 @@ const Board = styled.div`
   width: 550px;
 `
 
-const YoutubeBoard = ({ keys, items }) => {
+const YoutubeBoard = ({ keys, items, addSearch }) => {
   return (
     <Board>
-      <SearchBox logo={youtubeLogo} />
+      <SearchBox logo={youtubeLogo} addSearch={addSearch} />
       <KeyBox keys={keys} />
       {
         items && items.map(item => (
-          <YoutubeCard 
+          <YoutubeCard
+            key={uuid()}
             search={item.search}
             title={item.title}
             channelTitle={item.channelTitle}

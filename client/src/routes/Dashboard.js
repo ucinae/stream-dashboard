@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Layout, Row, Col } from 'antd'
 
+import { SearchContext } from '../contexts/SearchContext'
 import NaverBoard from '../components/naver/NaverBoard'
 import YoutubeBoard from '../components/youtube/YoutubeBoard'
 import TwitterBoard from '../components/twitter/TwitterBoard'
@@ -11,17 +12,36 @@ import YoutubeDummyData from '../temp/YoutubeDummyData'
 import TwitterDummyData from '../temp/TwitterDummyData'
 
 const Dashboard = () => {
+  const { 
+    naverSearch,
+    twitterSearch,
+    youtubeSearch,
+    addNaverSearch,
+    addYoutubeSearch,
+    addTwitterSearch
+  } = useContext(SearchContext)
   return (
     <Layout>
-      <Row type="flex" gutter="30">
+      <Row type="flex">
         <Col>
-          <NaverBoard items={NaverDummyData} keys={['dog', 'cat', '네이버']} />
+          <NaverBoard 
+            addSearch={addNaverSearch} 
+            items={NaverDummyData} 
+            keys={naverSearch} 
+          />
         </Col>
         <Col>
-          <YoutubeBoard items={YoutubeDummyData} keys={['dog', 'cat', '유튜브']} />
+          <YoutubeBoard
+            addSearch={addYoutubeSearch}
+            items={YoutubeDummyData} 
+            keys={youtubeSearch} />
         </Col>
         <Col>
-          <TwitterBoard items={TwitterDummyData} keys={['dog', 'cat', '트위터']} />
+          <TwitterBoard 
+            addSearch={addTwitterSearch}
+            items={TwitterDummyData} 
+            keys={twitterSearch} 
+          />
         </Col>
       </Row>
     </Layout>
