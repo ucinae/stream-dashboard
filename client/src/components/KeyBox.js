@@ -1,16 +1,18 @@
 import React from 'react'
-import { Tag, Icon } from 'antd'
+import { Row, Card, Tag, Icon } from 'antd'
 
 import RandomColor from '../utils/RandomColor'
 
 const KeyBox = ({ keys }) => {
   return (
-    <div style={{ margin: '1rem' }}>
-      {
-        keys.map(key => (<Tag color={RandomColor()}>#{key}</Tag>))
-      }
-      <Icon type="sync" spin />
-    </div>
+    <Row>
+      <Card>
+        {
+          keys && keys.map(key => (<Tag color={RandomColor()}>#{key}</Tag>))
+        }
+        <Icon style={{ float: 'right' }} type="sync" spin={keys} />
+      </Card>
+    </Row>
   )
 }
 

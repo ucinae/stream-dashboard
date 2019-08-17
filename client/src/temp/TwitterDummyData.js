@@ -1,0 +1,58 @@
+const TwitterDummyData = [
+  {
+    search: "dog",
+    text: "16 augusti 1861 dog drottning Ranavalona I av Madagaskar som fr\xc3\xa5n 1828 regerade landet med h\xc3\xa5rd hand och h\xc3\xb6ll poten\xe2\x80\xa6 https://t.co/Q5oD7bjEaX",
+    screenName: "kvinnohistoria",
+    name: "Kvinnohistoria",
+    createdAt: "20190816151222",
+    profileImageUrl:  "http://pbs.twimg.com/profile_images/728320494718570500/CMJmvf-b_normal.jpg",
+    favoriteCount: "0",
+  },
+  {
+    search: "dog",
+    text: "16 augusti 1861 dog drottning Ranavalona I av Madagaskar som fr\xc3\xa5n 1828 regerade landet med h\xc3\xa5rd hand och h\xc3\xb6ll poten\xe2\x80\xa6 https://t.co/Q5oD7bjEaX",
+    screenName: "kvinnohistoria",
+    name: "Kvinnohistoria",
+    createdAt: "20190816151222",
+    profileImageUrl:  "http://pbs.twimg.com/profile_images/728320494718570500/CMJmvf-b_normal.jpg",
+    favoriteCount: "0",
+  },
+  {
+    search: "dog",
+    text: "16 augusti 1861 dog drottning Ranavalona I av Madagaskar som fr\xc3\xa5n 1828 regerade landet med h\xc3\xa5rd hand och h\xc3\xb6ll poten\xe2\x80\xa6 https://t.co/Q5oD7bjEaX",
+    screenName: "kvinnohistoria",
+    name: "Kvinnohistoria",
+    createdAt: "20190816151222",
+    profileImageUrl:  "http://pbs.twimg.com/profile_images/728320494718570500/CMJmvf-b_normal.jpg",
+    favoriteCount: "0",
+  },
+  {
+    search: "dog",
+    text: "16 augusti 1861 dog drottning Ranavalona I av Madagaskar som fr\xc3\xa5n 1828 regerade landet med h\xc3\xa5rd hand och h\xc3\xb6ll poten\xe2\x80\xa6 https://t.co/Q5oD7bjEaX",
+    screenName: "kvinnohistoria",
+    name: "Kvinnohistoria",
+    createdAt: "20190816151222",
+    profileImageUrl:  "http://pbs.twimg.com/profile_images/728320494718570500/CMJmvf-b_normal.jpg",
+    favoriteCount: "0",
+  },
+  {
+    search: "dog",
+    text: "16 augusti 1861 dog drottning Ranavalona I av Madagaskar som fr\xc3\xa5n 1828 regerade landet med h\xc3\xa5rd hand och h\xc3\xb6ll poten\xe2\x80\xa6 https://t.co/Q5oD7bjEaX",
+    screenName: "kvinnohistoria",
+    name: "Kvinnohistoria",
+    createdAt: "20190816151222",
+    profileImageUrl:  "http://pbs.twimg.com/profile_images/728320494718570500/CMJmvf-b_normal.jpg",
+    favoriteCount: "0",
+  },
+  {
+    search: "dog",
+    text: "16 augusti 1861 dog drottning Ranavalona I av Madagaskar som fr\xc3\xa5n 1828 regerade landet med h\xc3\xa5rd hand och h\xc3\xb6ll poten\xe2\x80\xa6 https://t.co/Q5oD7bjEaX",
+    screenName: "kvinnohistoria",
+    name: "Kvinnohistoria",
+    createdAt: "20190816151222",
+    profileImageUrl:  "http://pbs.twimg.com/profile_images/728320494718570500/CMJmvf-b_normal.jpg",
+    favoriteCount: "0",
+  },
+]
+
+export default TwitterDummyData
