@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import uuid from 'uuid/v4'
 
 import SearchBox from '../SearchBox'
 import KeyBox from '../KeyBox'
@@ -10,14 +11,15 @@ const Board = styled.div`
   width: 550px;
 `
 
-const NaverBoard = ({ keys, items }) => {
+const NaverBoard = ({ keys, items, addSearch }) => {
   return (
     <Board>
-      <SearchBox logo={naverLogo} />
+      <SearchBox logo={naverLogo} addSearch={addSearch} />
       <KeyBox keys={keys} />
       {
         items && items.map(item => (
           <NaverCard 
+            key={uuid()}
             search={item.search}
             title={item.title}
             description={item.description}

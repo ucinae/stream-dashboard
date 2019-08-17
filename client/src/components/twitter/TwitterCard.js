@@ -6,7 +6,7 @@ const { Meta } = Card
 const TwitterCard = ({ search, text, screenName, name, createdAt, profileImageUrl, favoriteCount }) => {
   return (
     <Card>
-      <Row type="flex" gutter="20">
+      <Row type="flex">
         <Col>
           <Tag>#{search}</Tag>
           <b>{createdAt}</b>
