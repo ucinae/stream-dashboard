@@ -6,7 +6,7 @@ const { Meta } = Card
 const YoutubeCard = ({ search, title, channelTitle, description, publishedAt, thumbnail }) => {
   return (
     <Card>
-      <Row type="flex" gutter="20">
+      <Row type="flex">
         <Col>
           <img
               alt="thumbnail"

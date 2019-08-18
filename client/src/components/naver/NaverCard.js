@@ -6,11 +6,13 @@ const { Meta } = Card
 const NaverCard = ({ search, title, bloggername, description, postdate, link }) => {
   return (
     <Card>
-      <Row type="flex" gutter="20">
+      <Row type="flex">
         <Col>
           <Tag>#{search}</Tag>
           <b>{postdate}</b>
-          <Button type="primary" href={link}>link</Button>
+          <a href={link} target="_blank" rel="noopener noreferrer">
+            <Button type="primary">link</Button>
+          </a>
           <Meta
             style={{ margin: '1rem 0' }}
             title={title}

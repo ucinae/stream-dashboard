@@ -8,9 +8,9 @@ const KeyBox = ({ keys }) => {
     <Row>
       <Card>
         {
-          keys && keys.map(key => (<Tag color={RandomColor()}>#{key}</Tag>))
+          keys.map(key => (<Tag color={RandomColor()} key={key}>#{key}</Tag>))
         }
-        <Icon style={{ float: 'right' }} type="sync" spin={keys} />
+        <Icon style={{ float: 'right' }} type="sync" spin={keys && keys.length > 0} />
       </Card>
     </Row>
   )
