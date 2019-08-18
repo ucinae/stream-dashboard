@@ -42,6 +42,21 @@ const SearchContextProvider = props => {
     }
   }
 
+  const removeNaverSearch = key => {
+    setNaverSearch(naverSearch.filter(search => search !== key))
+    stompClient.send("/app/naver/remove", {}, key)
+  }
+
+  const removeYoutubeSearch = key => {
+    setYoutubeSearch(youtubeSearch.filter(search => search !== key))
+    stompClient.send("/app/youtube/remove", {}, key)
+  }
+
+  const removeTwitterSearch = key => {
+    setTwitterSearch(twitterSearch.filter(search => search !== key))
+    stompClient.send("/app/twitter/remove", {}, key)
+  }
+
   return (
     <SearchContext.Provider value={{ 
       twitterSearch,
@@ -49,7 +64,10 @@ const SearchContextProvider = props => {
       youtubeSearch,
       addNaverSearch,
       addYoutubeSearch,
-      addTwitterSearch
+      addTwitterSearch,
+      removeNaverSearch,
+      removeYoutubeSearch,
+      removeTwitterSearch
     }}>
       {props.children}
     </SearchContext.Provider>

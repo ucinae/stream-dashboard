@@ -18,7 +18,10 @@ const Dashboard = () => {
     youtubeSearch,
     addNaverSearch,
     addYoutubeSearch,
-    addTwitterSearch
+    addTwitterSearch,
+    removeNaverSearch,
+    removeYoutubeSearch,
+    removeTwitterSearch
   } = useContext(SearchContext)
   return (
     <Layout>
@@ -26,6 +29,7 @@ const Dashboard = () => {
         <Col>
           <NaverBoard 
             addSearch={addNaverSearch} 
+            removeSearch={removeNaverSearch}
             items={NaverDummyData} 
             keys={naverSearch} 
           />
@@ -33,12 +37,14 @@ const Dashboard = () => {
         <Col>
           <YoutubeBoard
             addSearch={addYoutubeSearch}
+            removeSearch={removeYoutubeSearch}
             items={YoutubeDummyData} 
             keys={youtubeSearch} />
         </Col>
         <Col>
           <TwitterBoard 
             addSearch={addTwitterSearch}
+            removeSearch={removeTwitterSearch}
             items={TwitterDummyData} 
             keys={twitterSearch} 
           />
