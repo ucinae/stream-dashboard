@@ -11,11 +11,11 @@ const Board = styled.div`
   width: 550px;
 `
 
-const TwitterBoard = ({ keys, items, addSearch }) => {
+const TwitterBoard = ({ keys, items, addSearch, removeSearch }) => {
   return (
     <Board>
       <SearchBox logo={twitterLogo} addSearch={addSearch} />
-      <KeyBox keys={keys} />
+      <KeyBox keys={keys} removeSearch={removeSearch} />
       {
         items && items.map(item => (
           <TwitterCard

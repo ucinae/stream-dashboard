@@ -11,11 +11,11 @@ const Board = styled.div`
   width: 550px;
 `
 
-const YoutubeBoard = ({ keys, items, addSearch }) => {
+const YoutubeBoard = ({ keys, items, addSearch, removeSearch }) => {
   return (
     <Board>
       <SearchBox logo={youtubeLogo} addSearch={addSearch} />
-      <KeyBox keys={keys} />
+      <KeyBox keys={keys} removeSearch={removeSearch} />
       {
         items && items.map(item => (
           <YoutubeCard
