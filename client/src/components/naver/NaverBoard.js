@@ -11,11 +11,11 @@ const Board = styled.div`
   width: 550px;
 `
 
-const NaverBoard = ({ keys, items, addSearch }) => {
+const NaverBoard = ({ keys, items, addSearch, removeSearch }) => {
   return (
     <Board>
       <SearchBox logo={naverLogo} addSearch={addSearch} />
-      <KeyBox keys={keys} />
+      <KeyBox keys={keys} removeSearch={removeSearch} />
       {
         items && items.map(item => (
           <NaverCard 
